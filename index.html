@@ -95,7 +95,7 @@
       <p class="section-subtitle">Выберите даты — модуль покажет свободные номера и актуальные цены без посредников</p>
     </div>
     <div class="booking-widget-box">
-      <div id="start-widget"></div>
+      <div id="search-widget"></div>
     </div>
   </section>
 
@@ -1023,10 +1023,41 @@
     </div>
   </footer>
 
-  <!-- FRONTDESK24 BOOKING WIDGET -->
-  <script src="https://pms.frontdesk24.ru/onlineWidget/startWidget.js"></script>
+  <!-- FRONTDESK24 BOOKING WIDGET (search form, opens booking in a popup) -->
   <script>
-    FD24StartWidget.createWidget("start-widget", "63CEC70F-AF77-4E55-9FFF-7A7BBB7FF18C", undefined, "");
+    widgetOptions = {
+      token: "5080A733-D88C-455B-8F0B-4ECD26387B4E",
+      target: "search-widget",
+      widget_width: "400",
+      splitDates: false,
+      align: "left",
+      showGuestsCount: false,
+      maxAdults: "10",
+      defAdults: "1",
+      showChildren: false,
+      maxChildren: "10",
+      minAge: "0",
+      maxAge: "17",
+      usePaygate: true,
+      showHours: true,
+      askHours: false,
+      alwaysShowTariff: false,
+      expanded: false,
+      emailRequired: false,
+      noResize: false,
+      hotelsInGroup: false,
+      sortMode: 0,
+      periodText: "Выберите даты",
+      method: "popup",
+      language: "ru",
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.type = 'text/javascript';
+      script.async = true;
+      script.src = 'https://pms.frontdesk24.ru/BookingWidgetFront/Scripts/widget.js';
+      document.getElementsByTagName('head')[0].appendChild(script);
+    })();
   </script>
 
   <!-- CORE JAVASCRIPT FOR INTERACTION & DYNAMICS -->

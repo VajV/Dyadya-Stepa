@@ -1776,5 +1776,7 @@
     .booking-widget-box {
       max-width: 1200px;
       margin: 0 auto;
-      min-height: 120px; /* reserve space so the page does not jump while the widget loads */
+      min-height: 80px; /* reserve space so the page does not jump while the widget loads */
+      display: flex;
+      justify-content: center;
     }
