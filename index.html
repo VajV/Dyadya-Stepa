@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Гостевой дом «Дядя Стёпа» в Адлере — номера, цены, бронирование онлайн</title>
+  <meta name="description" content="Гостевой дом «Дядя Стёпа» в Курортном городке Адлера: подогреваемый бассейн +28°C, номера с балконами и кухней, бильярд, бесплатная парковка. 10 минут пешком до моря. Бронируйте онлайн!">
+
+  <!-- Set theme before first paint to avoid color flashing -->
+  <script>
+    (function () {
+      var saved = localStorage.getItem('theme');
+      var dark = saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches);
+      document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
+    })();
+  </script>
+
+
+  <!-- Google Fonts (Manrope) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+
+  <!-- NAVIGATION HEADER -->
+  <header>
+    <div class="nav-container">
+      <a href="#" class="logo">Дядя<span>Стёпа</span>.ru</a>
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#rooms" class="nav-link">Номера</a></li>
+        <li><a href="#gallery" class="nav-link">Галерея</a></li>
+        <li><a href="#features" class="nav-link">Услуги</a></li>
+        <li><a href="#explore" class="nav-link">Что рядом</a></li>
+        <li><a href="#rules" class="nav-link">Правила</a></li>
+        <li><a href="#faq" class="nav-link">Вопросы</a></li>
+        <li><a href="#contacts" class="nav-link">Контакты</a></li>
+      </ul>
+      <div style="display: flex; align-items: center;">
+        <button class="btn-toggle-theme" onclick="toggleTheme()" aria-label="Переключить тему" id="theme-toggle-btn">
+          <!-- Sun Icon -->
+          <svg class="sun-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <!-- Moon Icon -->
+          <svg class="moon-icon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <a href="https://travel.yandex.ru/hotels/sochi/diadia-stiopa/?affiliate_clid=4910087&affiliate_vid=188657&travelpayouts_uid=4e8c9cbf79f7458cb8c6b9776-188657&utm_campaign=xn-----7kcbqaeee3dxbseo5qb.xn--p1ai&utm_medium=cpa&utm_source=travelpayouts" target="_blank" class="btn-header-booking">Забронировать <span class="btn-booking-text-online">онлайн</span></a>
+        <button class="btn-burger" id="burger-btn" onclick="toggleMenu()" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav-menu">
+          <svg class="burger-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+          <svg class="burger-close-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="5" x2="19" y2="19"/><line x1="19" y1="5" x2="5" y2="19"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-container">
+      <div class="hero-main">
+        <div class="rating-badge">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="color: var(--color-accent);"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          Превосходный рейтинг 9.4 / 10 по отзывам семей
+        </div>
+        <h1 class="hero-title">Гостевой дом <span>«Дядя Стёпа»</span> <em>в Адлере</em></h1>
+        <p class="hero-desc">Современный пятиэтажный корпус в самом сердце Курортного городка Адлера. 10 минут пешком до Чёрного моря, подогреваемый круглогодичный бассейн и южное гостеприимство.</p>
+        
+        <!-- PREMIUM CTA ACTIONS -->
+        <div class="hero-cta-actions">
+          <a href="https://travel.yandex.ru/hotels/sochi/diadia-stiopa/?affiliate_clid=4910087&affiliate_vid=188657&travelpayouts_uid=4e8c9cbf79f7458cb8c6b9776-188657&utm_campaign=xn-----7kcbqaeee3dxbseo5qb.xn--p1ai&utm_medium=cpa&utm_source=travelpayouts" target="_blank" class="btn-hero-primary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="flex-shrink:0;"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+            Забронировать отдых
+          </a>
+          <a href="#rooms" class="btn-hero-secondary">
+            Посмотреть номера
+          </a>
+        </div>
+      </div>
+      <div class="hero-preview">
+        <div class="hero-card">
+          <span class="hero-card-tag">Гостевой дом</span>
+          <h3>Наше здание</h3>
+          <p>Современный корпус с панорамным остеклением в Курортном городке. Закрытый двор, бассейн и номера с балконами.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ROOMS LISTING WITH JS FILTER -->
+  <section id="rooms">
+    <div class="section-header">
+      <div>
+        <h2 class="section-title">Каталог номеров в <span>Адлере</span></h2>
+        <p class="section-subtitle">Выберите категорию — точную стоимость на ваши даты покажет календарь бронирования. Цены ниже указаны ориентировочно, от стоимости в низкий сезон</p>
+      </div>
+    </div>
+    
+    <!-- JS FILTER BUTTONS -->
+    <div class="filter-bar">
+      <div class="filter-badge active" onclick="filterCategory('all', this)">Все категории (11)</div>
+      <div class="filter-badge" onclick="filterCategory('single', this)">Одноместные</div>
+      <div class="filter-badge" onclick="filterCategory('double', this)">Двухместные</div>
+      <div class="filter-badge" onclick="filterCategory('apartment', this)">Апартаменты</div>
+      <div class="filter-badge" onclick="filterCategory('suite', this)">Люксы</div>
+      <div class="filter-badge" onclick="filterCategory('balcony', this)">С балконом</div>
+    </div>
+
+    <!-- ROOM CATALOG -->
+    <div class="rooms-grid" id="rooms-catalog">
+      <!-- 1 -->
+      <div class="room-card" data-cat="single">
+        <div class="room-image-holder" style="background-image: url('room-single.webp');">
+          <span class="room-status">Бюджетно</span>
+        </div>
+        <div class="room-body">
+          <div class="room-meta-tags">
+            <span class="room-tag">Кондиционер</span>
+            <span class="room-tag">Свой санузел</span>
+          </div>
+          <h3 class="room-title">Одноместный номер Standard</h3>
+          <div class="room-size-desc">1 гость • 12 кв.м • Своя ванная комната</div>
+          <div class="room-amenities-list">
+            <div class="room-amenity">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Комфортная односпальная кровать
+            </div>
+            <div class="room-amenity">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              ТВ, холодильник, фен, сейф
+            </div>
+          </div>
+          <div class="room-price-block">
+            <div class="room-price-val">от 2 500 ₽<span> /сутки</span></div>
+            <button class="btn-room-direct-book" onclick="openBooking()">Забронировать</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2 -->
+      <div class="room-card" data-cat="double">
+        <div class="room-image-holder" style="background-image: url('room-double.webp');">
+          <span class="room-status">Хит продаж</span>
+        </div>
+        <div class="room-body">
+          <div class="room-meta-tags">
+            <span class="room-tag">Лучшая цена</span>
+            <span class="room-tag">Популярно</span>
+          </div>
+          <h3 class="room-title">Двухместный номер Standard</h3>
+          <div class="room-size-desc">2 гостя • 18 кв.м • Кондиционер, Сейф</div>
+          <div class="room-amenities-list">
+            <div class="room-amenity">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Большая двуспальная кровать
+            </div>
+            <div class="room-amenity">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Плоский ТВ, мини-бар, туалетные принадлежности
+            </div>
+          </div>
+          <div class="room-price-block">
+            <div class="room-price-val">от 3 500 ₽<span> /сутки</span></div>
+            <button class="btn-room-direct-book" onclick="openBooking()">Забронировать</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3 -->
+      <div class="room-card" data-cat="double balcony">
+        <div class="room-image-holder" style="background-image: url('room-double-balcony.webp');">
+          <span class="room-status">С балконом</span>
+        </div>
+        <div class="room-body">
+          <div class="room-meta-tags">
+            <span class="room-tag">Вид во двор</span>
+            <span class="room-tag">Уютный балкон</span>
+          </div>
+          <h3 class="room-title">Двухместный Standard с балконом</h3>
+          <div class="room-size-desc">2 гостя • 20 кв.м • Личный балкон</div>
+          <div class="room-amenities-list">
+            <div class="room-amenity">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Балкон с летней мебелью
+            </div>
+            <div class="room-amenity">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Встроенный кондиционер, большой санузел
+            </div>
+          </div>
+          <div class="room-price-block">
+            <div class="room-price-val">от 4 000 ₽<span> /сутки</span></div>
+            <button class="btn-room-direct-book" onclick="openBooking()">Забронировать</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4 -->
+      <div class="room-card" data-cat="double balcony">
+        <div class="room-image-holder" style="background-image: url('room-triple-balcony.webp');">
+          <span class="room-status">Для семей</span>
+        </div>
+        <div class="room-body">
+          <div class="room-meta-tags">
+            <span class="room-tag">3 спальных места</span>
+            <span class="room-tag">Балкон</span>
+          </div>
+          <h3 class="room-title">Трёхместный номер Standard с балконом</h3>
+          <div class="room-size-desc">3 гостя • 24 кв.м • Балкон со столиком</div>
+          <div class="room-amenities-list">
+            <div class="room-amenity">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              1 двуспальная + 1 односпальная кровать
+            </div>
+            <div class="room-amenity">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Вид на Кавказские горы/двор отеля
+            </div>
+          </div>
+          <div class="room-price-block">
+            <div class="room-price-val">от 4 800 ₽<span> /сутки</span></div>
+            <button class="btn-room-direct-book" onclick="openBooking()">Забронировать</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5 -->
+      <div class="room-card" data-cat="apartment balcony">
+        <div class="room-image-holder" style="background-image: url('room-apart-balcony.webp');">
+          <span class="room-status">Своя кухня</span>
+        </div>
+        <div class="room-body">
+          <div class="room-meta-tags">
+            <span class="room-tag">Кухня в номере</span>
+            <span class="room-tag">Балкон</span>
+          </div>
+          <h3 class="room-title">Апартаменты Standard с балконом</h3>
+          <div class="room-size-desc">4 гостя • 35 кв.м • Личная кухня, Балкон</div>
+          <div class="room-amenities-list">
+            <div class="room-amenity">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Кухонный уголок: плита, посуда, микроволновка
+            </div>
+            <div class="room-amenity">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Стиральная машина, электрочайник, посуда
+            </div>
+          </div>
+          <div class="room-price-block">
+            <div class="room-price-val">от 6 000 ₽<span> /сутки</span></div>
+            <button class="btn-room-direct-book" onclick="openBooking()">Забронировать</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 6 -->
+      <div class="room-card" data-cat="apartment">
+        <div class="room-image-holder" style="background-image: url('room-apart-double.webp');">
+          <span class="room-status">Премиум быт</span>
+        </div>
+        <div class="room-body">
+          <div class="room-meta-tags">
+            <span class="room-tag">Встроенная кухня</span>
+            <span class="room-tag">Двухместные</span>
+          </div>
+          <h3 class="room-title">Двухместные апартаменты Standard</h3>
+          <div class="room-size-desc">2 гостя • 30 кв.м • Полная автономность</div>
+          <div class="room-amenities-list">
+            <div class="room-amenity">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Оборудованная кухонная зона со столиком
+            </div>
+            <div class="room-amenity">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Уютная обеденная группа, стильный интерьер
+            </div>
+          </div>
+          <div class="room-price-block">
+            <div class="room-price-val">от 5 500 ₽<span> /сутки</span></div>
+            <button class="btn-room-direct-book" onclick="openBooking()">Забронировать</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 7 -->
+      <div class="room-card" data-cat="single apartment">
+        <div class="room-image-holder" style="background-image: url('room-apart-single.webp');">
+          <span class="room-status">Соло комфорт</span>
+        </div>
+        <div class="room-body">
+          <div class="room-meta-tags">
+            <span class="room-tag">Кухня</span>
+            <span class="room-tag">1-комнатный</span>
+          </div>
+          <h3 class="room-title">Одноместные апартаменты Standard</h3>
+          <div class="room-size-desc">1 гость • 20 кв.м • Кухня c плитой</div>
+          <div class="room-amenities-list">
+            <div class="room-amenity">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Собственная мини-кухня для уединения
+            </div>
+            <div class="room-amenity">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Быстрый Wi-Fi, рабочий стол, ТВ, сейф
+            </div>
+          </div>
+          <div class="room-price-block">
+            <div class="room-price-val">от 4 500 ₽<span> /сутки</span></div>
+            <button class="btn-room-direct-book" onclick="openBooking()">Забронировать</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 8 -->
+      <div class="room-card" data-cat="double">
+        <div class="room-image-holder" style="background-image: url('room-studio.webp');">
+          <span class="room-status">Студия</span>
+        </div>
+        <div class="room-body">
+          <div class="room-meta-tags">
+            <span class="room-tag">Дизайнерский ремонт</span>
+            <span class="room-tag">Премиум</span>
+          </div>
+          <h3 class="room-title">Двухместная студия</h3>
+          <div class="room-size-desc">2 гостя • 28 кв.м • Изысканный стиль</div>
+          <div class="room-amenities-list">
+            <div class="room-amenity">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Современное зонирование, ортопедический матрас
+            </div>
+            <div class="room-amenity">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Встроенная бытовая техника, премиальные ткани
+            </div>
+          </div>
+          <div class="room-price-block">
+            <div class="room-price-val">от 6 500 ₽<span> /сутки</span></div>
+            <button class="btn-room-direct-book" onclick="openBooking()">Забронировать</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 9 -->
+      <div class="room-card" data-cat="suite balcony">
+        <div class="room-image-holder" style="background-image: url('room-lux-balcony.webp');">
+          <span class="room-status">Люкс</span>
+        </div>
+        <div class="room-body">
+          <div class="room-meta-tags">
+            <span class="room-tag">Люкс-класс</span>
+            <span class="room-tag">Просторный балкон</span>
+          </div>
+          <h3 class="room-title">Люкс с балконом</h3>
+          <div class="room-size-desc">4 гостя • 40 кв.м • Панорамный вид</div>
+          <div class="room-amenities-list">
+            <div class="room-amenity">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Шикарный балкон с шезлонгами/креслами
+            </div>
+            <div class="room-amenity">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Ванна с гидромассажем, кофемашина в номере
+            </div>
+          </div>
+          <div class="room-price-block">
+            <div class="room-price-val">от 7 500 ₽<span> /сутки</span></div>
+            <button class="btn-room-direct-book" onclick="openBooking()">Забронировать</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 10 -->
+      <div class="room-card" data-cat="suite">
+        <div class="room-image-holder" style="background-image: url('room-lux-2k.webp');">
+          <span class="room-status">2 комнаты</span>
+        </div>
+        <div class="room-body">
+          <div class="room-meta-tags">
+            <span class="room-tag">Двухкомнатный</span>
+            <span class="room-tag">Люкс</span>
+          </div>
+          <h3 class="room-title">Люкс двухкомнатный</h3>
+          <div class="room-size-desc">4 гостя • 50 кв.м • Гостиная и Спальня</div>
+          <div class="room-amenities-list">
+            <div class="room-amenity">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Изолированная спальня и просторная гостиная
+            </div>
+            <div class="room-amenity">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Два ЖК-телевизора, большая зона отдыха с диваном
+            </div>
+          </div>
+          <div class="room-price-block">
+            <div class="room-price-val">от 8 500 ₽<span> /сутки</span></div>
+            <button class="btn-room-direct-book" onclick="openBooking()">Забронировать</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 11 -->
+      <div class="room-card" data-cat="suite balcony">
+        <div class="room-image-holder" style="background-image: url('room-lux-family.webp');">
+          <span class="room-status">Максимум</span>
+        </div>
+        <div class="room-body">
+          <div class="room-meta-tags">
+            <span class="room-tag">Семейный люкс</span>
+            <span class="room-tag">Для большой группы</span>
+          </div>
+          <h3 class="room-title">Семейный люкс с балконом</h3>
+          <div class="room-size-desc">до 5 гостей • 55 кв.м • Премиальный отдых</div>
+          <div class="room-amenities-list">
+            <div class="room-amenity">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Огромная терраса-балкон с видом на морской закат
+            </div>
+            <div class="room-amenity">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Вся необходимая техника, комфортные кровати King Size
+            </div>
+          </div>
+          <div class="room-price-block">
+            <div class="room-price-val">от 9 500 ₽<span> /сутки</span></div>
+            <button class="btn-room-direct-book" onclick="openBooking()">Забронировать</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PHOTO GALLERY SECTION -->
+  <section id="gallery" class="gallery-section">
+    <div class="section-header" style="text-align: center; max-width: 700px; margin: 0 auto 48px auto;">
+      <h2 class="section-title" style="width: 100%;">Галерея <span>нашего курорта</span></h2>
+      <p class="section-subtitle">Посмотрите на атмосферу беззаботного южного отдыха в гостевом доме «Дядя Стёпа»</p>
+    </div>
+    <div class="gallery-grid">
+      <!-- Item 1: Pool -->
+      <div class="gallery-item">
+        <img src="gallery-pool.webp" alt="Подогреваемый бассейн гостевого дома" class="gallery-img" loading="lazy" decoding="async">
+        <div class="gallery-overlay">
+          <span class="gallery-tag">Бассейн</span>
+          <h3 class="gallery-caption">Кристально чистый бассейн с подогревом</h3>
+        </div>
+      </div>
+      <!-- Item 2: Indoor pool -->
+      <div class="gallery-item tall">
+        <img src="gallery-pool-indoor.webp" alt="Бассейн под навесом" class="gallery-img" loading="lazy" decoding="async">
+        <div class="gallery-overlay">
+          <span class="gallery-tag">Бассейн</span>
+          <h3 class="gallery-caption">Купание в любую погоду — бассейн под навесом</h3>
+        </div>
+      </div>
+      <!-- Item 3: Billiards -->
+      <div class="gallery-item">
+        <img src="gallery-billiard.webp" alt="Бильярдная зона отеля" class="gallery-img" loading="lazy" decoding="async">
+        <div class="gallery-overlay">
+          <span class="gallery-tag">Досуг</span>
+          <h3 class="gallery-caption">Русский бильярд и настольный теннис</h3>
+        </div>
+      </div>
+      <!-- Item 4: Room Interior -->
+      <div class="gallery-item">
+        <img src="gallery-room.webp" alt="Интерьер номера" class="gallery-img" loading="lazy" decoding="async">
+        <div class="gallery-overlay">
+          <span class="gallery-tag">Номера</span>
+          <h3 class="gallery-caption">Светлые и уютные интерьеры номеров</h3>
+        </div>
+      </div>
+      <!-- Item 5: Balcony view -->
+      <div class="gallery-item tall">
+        <img src="gallery-view.webp" alt="Вид с балкона на Адлер" class="gallery-img" loading="lazy" decoding="async">
+        <div class="gallery-overlay">
+          <span class="gallery-tag">Виды</span>
+          <h3 class="gallery-caption">Панорамы Адлера с балконов верхних этажей</h3>
+        </div>
+      </div>
+      <!-- Item 6: Lobby -->
+      <div class="gallery-item">
+        <img src="gallery-lobby.webp" alt="Холл гостевого дома" class="gallery-img" loading="lazy" decoding="async">
+        <div class="gallery-overlay">
+          <span class="gallery-tag">Уют</span>
+          <h3 class="gallery-caption">Гостеприимный холл и зоны отдыха</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INFRASTRUCTURE FEATURES -->
+  <section id="features">
+    <div class="section-header">
+      <div>
+        <h2 class="section-title">Современная <span>инфраструктура</span></h2>
+        <p class="section-subtitle">Всё необходимое для беззаботного проживания на Черном море</p>
+      </div>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h20M2 5h20M2 19h20"/></svg>
+        </div>
+        <h3>Бассейн с подогревом</h3>
+        <p>Наш чистый круглогодичный подогреваемый бассейн (+28°C) с выделенной безопасной детской зоной купания.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9.09 9 1-1h3.82l1 1v3.82l-1 1H10.1l-1-1z"/></svg>
+        </div>
+        <h3>Развлечения и Спорт</h3>
+        <p>Игровая зона: качественный русский бильярд, настольный теннис во дворе, беговая дорожка и вибромассажер.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11a8 8 0 0 1 16 0M12 2v2M4.9 4.9l1.4 1.4M19.1 4.9l-1.4 1.4M2 14h20M2 17h20M2 20h20"/></svg>
+        </div>
+        <h3>Кухня и Мангал</h3>
+        <p>Просторная оборудованная общая кухня для самостоятельной готовки, а также уютная беседка-мангал.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3>Бесплатный Сервис</h3>
+        <p>Закрытый охраняемый двор с парковкой, скоростной Wi-Fi по всей гостинице, стиральные машины и гладилка.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- RECREATION & PANORAMA PROMO -->
+  <section id="recreation" class="recreation-section">
+    <div class="recreation-container">
+      <!-- Left Side Visuals -->
+      <div class="recreation-visual">
+        <div class="pool-badge">
+          <span class="pool-temp">+28°C</span>
+          <div class="pool-badge-text">
+            Подогреваемый<br>Бассейн
+          </div>
+        </div>
+        <img src="recreation-pool.webp" alt="Подогреваемый бассейн с шезлонгами" class="recreation-img" loading="lazy" decoding="async">
+      </div>
+      
+      <!-- Right Side Info -->
+      <div class="recreation-content">
+        <h2 class="recreation-title">Комфортный отдых и <span>Панорамные виды</span></h2>
+        <p class="recreation-desc">Мы создали идеальные условия для того, чтобы ваше пребывание в Адлере приносило максимум удовольствия. Благодаря расположению нашего пятиэтажного корпуса на возвышенности, вы сможете дышать чистейшим горно-морским воздухом и наслаждаться великолепными южными панорамами.</p>
+        
+        <div class="recreation-list">
+          <!-- Item 1: Cafe -->
+          <div class="recreation-item">
+            <div class="recreation-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8zM6 1v3M10 1v3M14 1v3"/></svg>
+            </div>
+            <div class="recreation-item-content">
+              <h4>Кафе-столовая на первом этаже</h4>
+              <p>На первом этаже нашего гостевого дома работает уютное кафе домашней кухни. Наслаждайтесь вкусными завтраками и сытными обедами прямо в здании отеля.</p>
+            </div>
+          </div>
+          
+          <!-- Item 2: Panoramic views -->
+          <div class="recreation-item">
+            <div class="recreation-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M12 6v11M6 12h12"/></svg>
+            </div>
+            <div class="recreation-item-content">
+              <h4>Виды на море и горы</h4>
+              <p>Высота нашего здания открывает потрясающий круговой обзор. С просторных балконов номеров верхних этажей можно любоваться алыми закатами над морем и вершинами Кавказа.</p>
+            </div>
+          </div>
+          
+          <!-- Item 3: Billiards & Active space -->
+          <div class="recreation-item">
+            <div class="recreation-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="2"/></svg>
+            </div>
+            <div class="recreation-item-content">
+              <h4>Бильярдная зона и теннис</h4>
+              <p>Специально оборудованное пространство со столами для русского бильярда и настольного тенниса. Отличное место, чтобы сыграть партию с друзьями в тени.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY BOOK WITH US SECTION -->
+  <section class="why-us">
+    <div class="why-us-container">
+      <div class="why-us-graphic"></div>
+      <div class="why-us-content">
+        <h2 class="why-us-title">Почему «Дядя Стёпа»? Легенда нашего отеля</h2>
+        <p class="why-us-desc">Наш красивый и современный гостевой дом представляет собой величественный пятиэтажный корпус. В тихом малоэтажном секторе Адлера наше здание гордо устремлено в небо, точь-в-точь как добрый великан Дядя Стёпа из любимого с детства стихотворения.<br><br>Благодаря такой высоте, с балконов верхних этажей открываются захватывающие дух панорамные виды на черноморские закаты и вершины Кавказских гор.</p>
+        <div class="stats-row">
+          <div class="stat-box">
+            <h3>5</h3>
+            <p>Этажей здания</p>
+          </div>
+          <div class="stat-box">
+            <h3>30</h3>
+            <p>Номеров всего</p>
+          </div>
+          <div class="stat-box">
+            <h3>10&nbsp;мин</h3>
+            <p>Пешком до моря</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOUSE RULES & POLICIES -->
+  <section id="rules" class="rules-section">
+    <div class="section-header" style="text-align: center; max-width: 700px; margin: 0 auto 48px auto;">
+      <h2 class="section-title" style="width: 100%;">Условия <span>Проживания</span></h2>
+      <p class="section-subtitle">Простые правила для вашего комфорта и безопасности</p>
+    </div>
+    <div class="rules-grid">
+      <div class="rules-card">
+        <h3 class="rules-title">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          Расчетный час
+        </h3>
+        <div class="rule-item">
+          <div class="rule-bullet"></div>
+          <div><strong>Время заезда:</strong> с 14:00 (при наличии готового номера возможно заселение раньше).</div>
+        </div>
+        <div class="rule-item">
+          <div class="rule-bullet"></div>
+          <div><strong>Время выезда:</strong> до 12:00 дня по местному времени.</div>
+        </div>
+        <div class="rule-item">
+          <div class="rule-bullet"></div>
+          <div><strong>Продление проживания:</strong> согласовывается с администратором заранее при наличии свободных номеров.</div>
+        </div>
+      </div>
+      
+      <div class="rules-card">
+        <h3 class="rules-title">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Общие правила отеля
+        </h3>
+        <div class="rule-item">
+          <div class="rule-bullet"></div>
+          <div><strong>Уборка номеров:</strong> регулярная смена постельного белья и влажная уборка раз в 5-7 дней или по запросу.</div>
+        </div>
+        <div class="rule-item">
+          <div class="rule-bullet"></div>
+          <div><strong>Размещение с животными:</strong> по предварительному согласованию (может взиматься дополнительный депозит).</div>
+        </div>
+        <div class="rule-item">
+          <div class="rule-bullet"></div>
+          <div><strong>Тихий час:</strong> просим соблюдать тишину на территории отеля и у бассейна с 23:00 до 08:00.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ ACCORDION BLOCK -->
+  <section id="faq">
+    <div class="section-header" style="text-align: center; max-width: 700px; margin: 0 auto 48px auto;">
+      <h2 class="section-title" style="width: 100%;">Часто <span>задаваемые вопросы</span></h2>
+      <p class="section-subtitle">Собрали для вас самую полезную информацию</p>
+    </div>
+    <div class="faq-container">
+      <!-- Q1 -->
+      <div class="faq-item">
+        <button class="faq-trigger" onclick="toggleFaq(this)">
+          Бассейн действительно подогревается круглый год?
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-content">
+          Да, на территории отеля установлен современный круглогодичный подогреваемый бассейн. Мы поддерживаем температуру воды на уровне +26°C... +28°C. Также в бассейне предусмотрено неглубокое детское отделение для безопасного плавания детей.
+        </div>
+      </div>
+      <!-- Q2 -->
+      <div class="faq-item">
+        <button class="faq-trigger" onclick="toggleFaq(this)">
+          Как далеко гостевой дом находится от моря и пляжа?
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-content">
+          До ближайшего благоустроенного пляжа Курортного городка — около 950 метров, это 10–12 минут неспешной ходьбы. По пути — магазины, столовые, сувенирные лавки, а знаменитый аквапарк «Амфибиус» находится всего в 700 метрах от дома.
+        </div>
+      </div>
+      <!-- Q3 -->
+      <div class="faq-item">
+        <button class="faq-trigger" onclick="toggleFaq(this)">
+          Есть ли возможность готовить еду самостоятельно?
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-content">
+          Да. У нас оборудована большая летняя общая кухня со всей необходимой техникой (плиты, микроволновые печи, большие холодильники, электрические чайники) и полным комплектом посуды. Также в каталоге есть отдельные номера-апартаменты с собственной мини-кухней прямо в номере. Во дворе есть мангальная зона для шашлыков.
+        </div>
+      </div>
+      <!-- Q4 -->
+      <div class="faq-item">
+        <button class="faq-trigger" onclick="toggleFaq(this)">
+          Парковка для гостей бесплатная?
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-content">
+          Да, мы предоставляем бесплатные парковочные места для автомобилей наших гостей в закрытом охраняемом внутреннем дворе гостевого дома. Рекомендуется сообщить о приезде на авто заранее, чтобы забронировать место.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPLORE ADLER TOURIST GUIDE -->
+  <section id="explore" class="explore-section">
+    <div class="section-header" style="text-align: center; max-width: 700px; margin: 0 auto 48px auto;">
+      <h2 class="section-title" style="width: 100%;">Что <span>посетить рядом</span></h2>
+      <p class="section-subtitle">Ключевые достопримечательности Сочи и Сириуса в легкой доступности</p>
+    </div>
+    <div class="explore-grid">
+      <!-- Card 1: Olympic Park -->
+      <div class="explore-card">
+        <div class="explore-bg" style="background-image: url('olimpiiskii-park-opt.webp');"></div>
+        <div class="explore-gradient"></div>
+        <span class="explore-time-badge">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          🚗 15 мин на авто
+        </span>
+        <h3>Олимпийский парк</h3>
+        <p>Стадионы зимней Олимпиады-2014, трасса Формулы-1 и знаменитое вечернее шоу поющих фонтанов под классическую музыку.</p>
+      </div>
+
+      <!-- Card 2: Sochi Park -->
+      <div class="explore-card">
+        <div class="explore-bg" style="background-image: url('sochi-park-opt.webp');"></div>
+        <div class="explore-gradient"></div>
+        <span class="explore-time-badge">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          🚗 15 мин на авто
+        </span>
+        <h3>Сочи Парк</h3>
+        <p>Первый в стране тематический парк развлечений с экстремальными американскими горками, дельфинарием и сказочной атмосферой.</p>
+      </div>
+
+      <!-- Card 3: Yuzhnye Kultury Park -->
+      <div class="explore-card">
+        <div class="explore-bg" style="background-image: url('yuzhnye-kultury-opt.webp');"></div>
+        <div class="explore-gradient"></div>
+        <span class="explore-time-badge">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          🚗 10 мин на авто
+        </span>
+        <h3>Парк «Южные культуры»</h3>
+        <p>Живописный дендрологический парк с вековыми секвойями, розариями, прудами, где плавают лебеди, и редкими экзотическими растениями.</p>
+      </div>
+
+      <!-- Card 4: Sochi Dendrariy -->
+      <div class="explore-card">
+        <div class="explore-bg" style="background-image: url('dendrariy.webp');"></div>
+        <div class="explore-gradient"></div>
+        <span class="explore-time-badge">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          🚗 25 мин на авто
+        </span>
+        <h3>Сочинский Дендрарий</h3>
+        <p>Всемирно известный ботанический сад с уникальной коллекцией субтропических растений, канатной дорогой и панорамным видом на море.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section id="reviews" style="background-color: var(--color-bg-surface); border-top: 1px solid var(--color-border);">
+    <div class="section-header" style="text-align: center; max-width: 700px; margin: 0 auto 48px auto;">
+      <h2 class="section-title" style="width: 100%;">Отзывы <span>наших гостей</span></h2>
+      <p class="section-subtitle">Честные мнения о проживании и сервисе</p>
+    </div>
+    <div class="reviews-list">
+      <div class="review-item">
+        <div class="review-score">
+          ★★★★★ 5.0
+        </div>
+        <p class="review-text">«Чистейший отель, прекрасный бассейн, до моря минут 10 спокойным шагом. В номере отличный кондиционер, спасает от жары. Всё на высоте!»</p>
+        <div class="review-user">Сергей В.</div>
+        <div class="review-date">Май 2026</div>
+      </div>
+      <div class="review-item">
+        <div class="review-score">
+          ★★★★★ 5.0
+        </div>
+        <p class="review-text">«Порадовало наличие общей кухни и мангала во дворе. По вечерам играли в бильярд, плавали в бассейне. Номера просторные, постельное белье свежее.»</p>
+        <div class="review-user">Ирина К.</div>
+        <div class="review-date">Август 2025</div>
+      </div>
+      <div class="review-item">
+        <div class="review-score">
+          ★★★★★ 4.8
+        </div>
+        <p class="review-text">«Отличный вид из окна пятого этажа! Здание действительно выделяется. Во дворе бассейн с подогревом, купались даже когда море было прохладным.»</p>
+        <div class="review-user">Дмитрий М.</div>
+        <div class="review-date">Сентябрь 2025</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTS & LOCATION MAP (PREMIUM split screeen with smooth overlay transition) -->
+  <section id="contacts" style="background-color: var(--color-contacts-bg); border-top: 1px solid var(--color-border); padding: 80px 24px;">
+    <div class="contacts-container">
+      
+      <!-- Left Slate/Midnight Pane -->
+      <div class="info-pane">
+        <div>
+          <span class="contacts-subtitle">Контакты и Локация</span>
+          <h2 class="info-title">Как нас найти</h2>
+          
+          <div class="contacts-list">
+            
+            <!-- Address -->
+            <div class="contacts-item">
+              <div class="contacts-icon-wrapper">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div class="contacts-text-box">
+                <h3>Адрес гостевого дома</h3>
+                <p>Краснодарский край, г. Сочи, Адлер, микрорайон Курортный город, ул. Фермерская, д. 26</p>
+              </div>
+            </div>
+            
+            <!-- Phone & Messenger -->
+            <div class="contacts-item">
+              <div class="contacts-icon-wrapper">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <div class="contacts-text-box">
+                <h3>Контакты для бронирования</h3>
+                <a href="tel:+79884142982" class="phone-link">+7 (988) 414-29-82</a>
+                <span>Отвечаем в WhatsApp / Telegram круглосуточно</span>
+              </div>
+            </div>
+            
+            <!-- Transit info -->
+            <div class="contacts-item">
+              <div class="contacts-icon-wrapper">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="22" height="13" rx="2" ry="2"/><path d="M5 21v-3h14v3M4 16v2h16v-2"/></svg>
+              </div>
+              <div class="contacts-text-box">
+                <h3>Схема проезда от ЖД вокзала</h3>
+                <p>Любое маршрутное такси в сторону Сочи (№ 60, 105, 117, 124, 125, 134) до остановки пансионат «Изумруд».</p>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+        
+        <!-- Premium Yandex Maps Navigation Hand-Off -->
+        <div class="contacts-action-box">
+          <a href="https://yandex.ru/maps/?rtext=~43.468162,39.901438" target="_blank" class="btn-get-directions">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m16.2 7.8-2 5.7-5.7 2 2-5.7z"/></svg>
+            Проложить маршрут
+          </a>
+        </div>
+        
+      </div>
+      
+      <!-- Right Map Pane with fade overlay -->
+      <div class="map-wrapper">
+        <div class="map-overlay-shadow"></div>
+        <div class="map-box">
+          <iframe src="https://yandex.ru/map-widget/v1/?text=%D0%A1%D0%BE%D1%87%D0%B8%2C%20%D0%90%D0%B4%D0%BB%D0%B5%D1%80%2C%20%D1%83%D0%BB%D0%B8%D1%86%D0%B0%20%D0%A4%D0%B5%D1%80%D0%BC%D0%B5%D1%80%D1%81%D0%BA%D0%B0%D1%8F%2C%2026&z=16&l=map" width="100%" height="100%" frameborder="0" allowfullscreen="true" loading="lazy" title="Гостевой дом Дядя Стёпа на карте" style="border:0; position:relative; z-index:1;"></iframe>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-flex">
+      <p>© 2026 Гостевой дом «Дядя Стёпа» в Адлере. Официальный сайт.</p>
+      <div class="footer-links">
+        <a href="#rooms">Номера</a>
+        <a href="#contacts">Контакты</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- CORE JAVASCRIPT FOR INTERACTION & DYNAMICS -->
+  <script src="script.js"></script>
+</body>
+</html>
