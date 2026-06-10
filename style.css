@@ -1768,15 +1768,41 @@
     }
 
     /* ===== DIRECT BOOKING WIDGET SECTION (Frontdesk24) ===== */
+    /* Section keeps the shared page background (base color + ornament); the plate itself pops in Yandex-style yellow/black */
     .booking-section {
-      background-color: var(--color-bg-surface);
-      border-bottom: 1px solid var(--color-border);
       padding: 56px 24px;
     }
-    .booking-widget-box {
-      max-width: 1200px;
+    .booking-plate {
+      max-width: 720px;
       margin: 0 auto;
-      min-height: 80px; /* reserve space so the page does not jump while the widget loads */
+      background: linear-gradient(135deg, #FFC533 0%, #FFB300 55%, #FFA000 100%);
+      border: 1px solid #E6A700;
+      border-radius: var(--radius-lg);
+      padding: 26px 32px 32px 32px;
+      box-shadow: 0 12px 35px rgba(255, 179, 0, 0.35);
+    }
+    .booking-plate-title {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      color: #0F172A;
+      font-size: 16px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 18px;
+    }
+    #search-widget {
       display: flex;
       justify-content: center;
+      min-height: 56px; /* reserve space so the page does not jump while the widget loads */
+    }
+    @media (max-width: 576px) {
+      .booking-plate {
+        padding: 20px 14px 22px 14px;
+      }
+      .booking-plate-title {
+        font-size: 13px;
+      }
     }
