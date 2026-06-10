@@ -88,6 +88,17 @@
     </div>
   </section>
 
+  <!-- DIRECT BOOKING WIDGET (Frontdesk24) -->
+  <section id="booking" class="booking-section">
+    <div class="section-header" style="text-align: center; max-width: 700px; margin: 0 auto 32px auto;">
+      <h2 class="section-title" style="width: 100%;">Бронирование <span>напрямую</span></h2>
+      <p class="section-subtitle">Выберите даты — модуль покажет свободные номера и актуальные цены без посредников</p>
+    </div>
+    <div class="booking-widget-box">
+      <div id="start-widget"></div>
+    </div>
+  </section>
+
   <!-- ROOMS LISTING WITH JS FILTER -->
   <section id="rooms">
     <div class="section-header">
@@ -1011,6 +1022,12 @@
       </div>
     </div>
   </footer>
+
+  <!-- FRONTDESK24 BOOKING WIDGET -->
+  <script src="https://pms.frontdesk24.ru/onlineWidget/startWidget.js"></script>
+  <script>
+    FD24StartWidget.createWidget("start-widget", "63CEC70F-AF77-4E55-9FFF-7A7BBB7FF18C", undefined, "");
+  </script>
 
   <!-- CORE JAVASCRIPT FOR INTERACTION & DYNAMICS -->
   <script src="script.js"></script>
