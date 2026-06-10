@@ -1,9 +1,9 @@
 /* DESIGN SYSTEM (Sleek Tech Theme with Premium Brand Blue & Yellow/Gold) */
     :root {
-      --color-bg-base: #F4F7FB; /* Premium light blue-slate */
-      --color-bg-surface: #FFFFFF;
-      --color-bg-input: #F8FAFC;
-      --color-contacts-bg: #F1F5F9;
+      --color-bg-base: #E7ECF4; /* Premium light blue-slate, dimmed so the gold ornament reads */
+      --color-bg-surface: #F7F9FC;
+      --color-bg-input: #ECF1F7;
+      --color-contacts-bg: #E2E8F1;
       
       /* Brand Color Palette */
       --color-primary: #0A58CA; /* Royal Brand Blue */
@@ -1600,7 +1600,7 @@
     }
     /* Hero uses a background shorthand with a gradient — layer the ornament on top of it */
     .hero {
-      background: var(--ornament), linear-gradient(180deg, var(--color-bg-surface) 0%, #EDF4FD 100%);
+      background: var(--ornament), linear-gradient(180deg, var(--color-bg-surface) 0%, #DCE7F5 100%);
       background-size: 140px 140px, auto;
     }
     [data-theme="dark"] .hero {
