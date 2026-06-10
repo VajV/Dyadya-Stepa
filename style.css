@@ -1586,12 +1586,26 @@
     }
 
     /* ===== ORNAMENT BACKGROUND PATTERN (Armenian-style gold) ===== */
-    body {
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140' viewBox='0 0 140 140'%3E%3Cg fill='none' stroke='%23C5912C' stroke-width='1.2' stroke-linecap='round' opacity='.16'%3E%3Cpath d='M70 22c9 8 9 18 0 26c-9-8-9-18 0-26z'/%3E%3Cpath d='M70 118c9-8 9-18 0-26c-9 8-9 18 0 26z'/%3E%3Cpath d='M22 70c8-9 18-9 26 0c-8 9-18 9-26 0z'/%3E%3Cpath d='M118 70c-8-9-18-9-26 0c8 9 18 9 26 0z'/%3E%3Ccircle cx='70' cy='70' r='4'/%3E%3Cpath d='M35 35c8 1 12 5 13 13M105 35c-8 1-12 5-13 13M35 105c8-1 12-5 13-13M105 105c-8-1-12-5-13-13'/%3E%3Ccircle cx='35' cy='35' r='1.6'/%3E%3Ccircle cx='105' cy='35' r='1.6'/%3E%3Ccircle cx='35' cy='105' r='1.6'/%3E%3Ccircle cx='105' cy='105' r='1.6'/%3E%3Ccircle cx='10' cy='70' r='1.4'/%3E%3Ccircle cx='130' cy='70' r='1.4'/%3E%3Ccircle cx='70' cy='10' r='1.4'/%3E%3Ccircle cx='70' cy='130' r='1.4'/%3E%3C/g%3E%3C/svg%3E");
+    /* Tile is defined once per theme; applied to every section so the pattern runs through the whole page. */
+    :root {
+      --ornament: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140' viewBox='0 0 140 140'%3E%3Cg fill='none' stroke='%23C5912C' stroke-width='1.2' stroke-linecap='round' opacity='.21'%3E%3Cpath d='M70 22c9 8 9 18 0 26c-9-8-9-18 0-26z'/%3E%3Cpath d='M70 118c9-8 9-18 0-26c-9 8-9 18 0 26z'/%3E%3Cpath d='M22 70c8-9 18-9 26 0c-8 9-18 9-26 0z'/%3E%3Cpath d='M118 70c-8-9-18-9-26 0c8 9 18 9 26 0z'/%3E%3Ccircle cx='70' cy='70' r='4'/%3E%3Cpath d='M35 35c8 1 12 5 13 13M105 35c-8 1-12 5-13 13M35 105c8-1 12-5 13-13M105 105c-8-1-12-5-13-13'/%3E%3Ccircle cx='35' cy='35' r='1.6'/%3E%3Ccircle cx='105' cy='35' r='1.6'/%3E%3Ccircle cx='35' cy='105' r='1.6'/%3E%3Ccircle cx='105' cy='105' r='1.6'/%3E%3Ccircle cx='10' cy='70' r='1.4'/%3E%3Ccircle cx='130' cy='70' r='1.4'/%3E%3Ccircle cx='70' cy='10' r='1.4'/%3E%3Ccircle cx='70' cy='130' r='1.4'/%3E%3C/g%3E%3C/svg%3E");
+    }
+    [data-theme="dark"] {
+      --ornament: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140' viewBox='0 0 140 140'%3E%3Cg fill='none' stroke='%23D8AC4A' stroke-width='1.2' stroke-linecap='round' opacity='.12'%3E%3Cpath d='M70 22c9 8 9 18 0 26c-9-8-9-18 0-26z'/%3E%3Cpath d='M70 118c9-8 9-18 0-26c-9 8-9 18 0 26z'/%3E%3Cpath d='M22 70c8-9 18-9 26 0c-8 9-18 9-26 0z'/%3E%3Cpath d='M118 70c-8-9-18-9-26 0c8 9 18 9 26 0z'/%3E%3Ccircle cx='70' cy='70' r='4'/%3E%3Cpath d='M35 35c8 1 12 5 13 13M105 35c-8 1-12 5-13 13M35 105c8-1 12-5 13-13M105 105c-8-1-12-5-13-13'/%3E%3Ccircle cx='35' cy='35' r='1.6'/%3E%3Ccircle cx='105' cy='35' r='1.6'/%3E%3Ccircle cx='35' cy='105' r='1.6'/%3E%3Ccircle cx='105' cy='105' r='1.6'/%3E%3Ccircle cx='10' cy='70' r='1.4'/%3E%3Ccircle cx='130' cy='70' r='1.4'/%3E%3Ccircle cx='70' cy='10' r='1.4'/%3E%3Ccircle cx='70' cy='130' r='1.4'/%3E%3C/g%3E%3C/svg%3E");
+    }
+    section,
+    footer {
+      background-image: var(--ornament);
       background-size: 140px 140px;
     }
-    [data-theme="dark"] body {
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140' viewBox='0 0 140 140'%3E%3Cg fill='none' stroke='%23D8AC4A' stroke-width='1.2' stroke-linecap='round' opacity='.09'%3E%3Cpath d='M70 22c9 8 9 18 0 26c-9-8-9-18 0-26z'/%3E%3Cpath d='M70 118c9-8 9-18 0-26c-9 8-9 18 0 26z'/%3E%3Cpath d='M22 70c8-9 18-9 26 0c-8 9-18 9-26 0z'/%3E%3Cpath d='M118 70c-8-9-18-9-26 0c8 9 18 9 26 0z'/%3E%3Ccircle cx='70' cy='70' r='4'/%3E%3Cpath d='M35 35c8 1 12 5 13 13M105 35c-8 1-12 5-13 13M35 105c8-1 12-5 13-13M105 105c-8-1-12-5-13-13'/%3E%3Ccircle cx='35' cy='35' r='1.6'/%3E%3Ccircle cx='105' cy='35' r='1.6'/%3E%3Ccircle cx='35' cy='105' r='1.6'/%3E%3Ccircle cx='105' cy='105' r='1.6'/%3E%3Ccircle cx='10' cy='70' r='1.4'/%3E%3Ccircle cx='130' cy='70' r='1.4'/%3E%3Ccircle cx='70' cy='10' r='1.4'/%3E%3Ccircle cx='70' cy='130' r='1.4'/%3E%3C/g%3E%3C/svg%3E");
+    /* Hero uses a background shorthand with a gradient — layer the ornament on top of it */
+    .hero {
+      background: var(--ornament), linear-gradient(180deg, var(--color-bg-surface) 0%, #EDF4FD 100%);
+      background-size: 140px 140px, auto;
+    }
+    [data-theme="dark"] .hero {
+      background: var(--ornament), linear-gradient(180deg, #111827 0%, #070A13 100%);
+      background-size: 140px 140px, auto;
     }
 
     /* ===== ROOM CARD PHOTO SLIDER ===== */
