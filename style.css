@@ -1784,21 +1784,21 @@
     .booking-eyebrow {
       display: inline-flex;
       align-items: center;
-      gap: 6px;
-      color: var(--color-accent);
-      font-size: 10px;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 2.5px;
-      margin-bottom: 4px;
+      gap: 8px;
+      color: var(--color-text-main);
+      font-size: 34px;
+      font-weight: 900;
+      letter-spacing: -1px;
+      line-height: 1.15;
+      margin-bottom: 6px;
     }
     .booking-title {
-      font-size: 28px;
-      font-weight: 900;
-      color: var(--color-text-main);
-      letter-spacing: -0.75px;
-      line-height: 1.15;
-      margin-bottom: 14px;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--color-text-muted);
+      letter-spacing: 0;
+      line-height: 1.4;
+      margin-bottom: 16px;
     }
     .booking-hint { display: none; }
     /* FD24's widget.js sets position:absolute on #search-widget via inline style.
