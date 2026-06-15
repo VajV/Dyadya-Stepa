@@ -3,14 +3,14 @@
   "short_name": "Дядя Стёпа",
   "description": "Гостевой дом «Дядя Стёпа» в Курортном городке Адлера: подогреваемый бассейн, номера с балконами и кухней, бильярд, бесплатная парковка, 10 минут до моря.",
   "lang": "ru",
-  "start_url": "/",
-  "scope": "/",
+  "start_url": ".",
+  "scope": ".",
   "display": "standalone",
   "background_color": "#E7ECF4",
   "theme_color": "#0A58CA",
   "icons": [
-    { "src": "/favicon.svg", "type": "image/svg+xml", "sizes": "any" },
-    { "src": "/icon-192.png", "type": "image/png", "sizes": "192x192", "purpose": "any" },
-    { "src": "/icon-512.png", "type": "image/png", "sizes": "512x512", "purpose": "any" }
+    { "src": "favicon.svg", "type": "image/svg+xml", "sizes": "any" },
+    { "src": "icon-192.png", "type": "image/png", "sizes": "192x192", "purpose": "any" },
+    { "src": "icon-512.png", "type": "image/png", "sizes": "512x512", "purpose": "any" }
   ]
 }
