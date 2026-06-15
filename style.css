@@ -1770,22 +1770,11 @@
 
     /* ===== DIRECT BOOKING WIDGET SECTION (Frontdesk24) ===== */
     .booking-section {
-      background: linear-gradient(160deg, #071F43 0%, #0a3a8b 55%, #0A58CA 100%);
+      background-image: var(--ornament), linear-gradient(160deg, #071F43 0%, #0a3a8b 55%, #0A58CA 100%);
+      background-size: 140px 140px, auto;
       padding: 28px 24px;
       position: relative;
       overflow-x: clip;
-      border-top: 3px solid var(--color-accent);
-      background-image: none;
-    }
-    /* subtle ornament overlay */
-    .booking-section::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: var(--ornament);
-      background-size: 140px 140px;
-      opacity: 0.1;
-      pointer-events: none;
     }
     .booking-inner {
       max-width: 520px;
