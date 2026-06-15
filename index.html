@@ -166,11 +166,13 @@
 
   <!-- DIRECT BOOKING WIDGET (Frontdesk24) -->
   <section id="booking" class="booking-section">
-    <div class="booking-plate">
-      <div class="booking-plate-title">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-        Онлайн-бронирование без посредников
-      </div>
+    <div class="booking-inner">
+      <span class="booking-eyebrow">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        Прямое бронирование
+      </span>
+      <h2 class="booking-title">Забронируйте номер онлайн</h2>
+      <p class="booking-hint">Выберите даты — модуль покажет свободные номера и актуальные цены без посредников</p>
       <div id="search-widget"></div>
     </div>
   </section>
@@ -1102,25 +1104,25 @@
     </div>
   </footer>
 
-  <!-- Clamp FD24 elements that may be injected outside the booking plate into body -->
+  <!-- Clamp FD24 elements that may be injected outside .booking-inner into body -->
   <script>
   (function() {
     function clampFD24() {
-      var plate = document.querySelector('.booking-plate');
-      if (!plate) return;
-      var w = Math.round(plate.getBoundingClientRect().width);
+      var inner = document.querySelector('.booking-inner');
+      if (!inner) return;
+      var w = Math.min(Math.round(inner.getBoundingClientRect().width), 400);
       ['search-widgetplace-holder', 'search-widget-iframe'].forEach(function(id) {
         var el = document.getElementById(id);
         if (!el) return;
-        if (!plate.contains(el)) {
-          // element was injected outside the plate — hard-clamp its width
+        if (!inner.contains(el)) {
           el.style.setProperty('max-width', w + 'px', 'important');
           el.style.setProperty('overflow-x', 'hidden', 'important');
           el.style.setProperty('box-sizing', 'border-box', 'important');
+          el.style.setProperty('margin-left', 'auto', 'important');
+          el.style.setProperty('margin-right', 'auto', 'important');
         }
       });
     }
-    // Run multiple times: FD24 injects asynchronously
     [300, 800, 1500, 3000].forEach(function(ms) { setTimeout(clampFD24, ms); });
     new MutationObserver(clampFD24).observe(document.body, { childList: true, subtree: true });
   })();
