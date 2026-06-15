@@ -48,6 +48,7 @@
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
       transition: var(--transition-theme);
+      overflow-x: clip; /* hard stop on any horizontal page scroll; clip (not hidden) keeps the sticky header working */
     }
     header, .feature-card, .room-card, .rules-card, .review-item, .info-pane, .explore-card, .recreation-item, input, select {
       transition: var(--transition-theme), var(--transition-smooth);
@@ -1771,16 +1772,22 @@
     /* Section keeps the shared page background (base color + ornament); the plate itself pops in bold brand yellow/black */
     .booking-section {
       padding: 56px 24px;
+      position: relative; /* containing block for the injected widget */
+      overflow-x: clip;   /* clip any FD24 element that overflows horizontally inside the section */
     }
     .booking-plate {
-      max-width: 470px; /* snug around the 400px booking module instead of a wide empty plate */
+      max-width: 470px;
       margin: 0 auto;
       background: linear-gradient(135deg, #FFC533 0%, #FFB300 55%, #FFA000 100%);
       border: 1px solid #E6A700;
       border-radius: var(--radius-lg);
       padding: 26px 28px 30px 28px;
       box-shadow: 0 12px 35px rgba(255, 179, 0, 0.35);
-      overflow: hidden; /* never let the module push page width to the right */
+      position: relative; /* containing block for FD24's absolute-positioned elements */
+      overflow: hidden;   /* clip anything wider than the plate */
+      /* transform creates a new stacking context — forces position:fixed FD24 children
+         to position relative to THIS element instead of the viewport */
+      transform: translateZ(0);
     }
     .booking-plate-title {
       display: flex;
@@ -1794,11 +1801,28 @@
       letter-spacing: 0.5px;
       margin-bottom: 18px;
     }
+    /* FD24's widget.js overwrites #search-widget inline styles (position:absolute, fixed width).
+       !important beats inline styles. transform on .booking-plate traps fixed descendants. */
     #search-widget {
-      min-height: 56px; /* reserve space so the page does not jump while the widget loads */
-      max-width: 100%;
-      overflow-x: auto; /* a too-wide module scrolls inside the plate, not the whole site */
-      -webkit-overflow-scrolling: touch;
+      position: relative !important;
+      left: auto !important;
+      top: auto !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      min-height: 56px;
+      overflow-x: hidden;
+    }
+    /* FD24 injected elements — constrain width regardless of where they appear in the DOM.
+       min() keeps them ≤ 400 px on wide screens AND fits narrow viewports (48px = section side padding). */
+    #search-widgetplace-holder {
+      max-width: min(400px, calc(100vw - 48px)) !important;
+      overflow-x: hidden !important;
+      box-sizing: border-box !important;
+    }
+    #search-widget-iframe {
+      max-width: 100% !important;
+      width: 100% !important;
+      display: block !important;
     }
     @media (max-width: 576px) {
       .booking-section {
@@ -1809,5 +1833,8 @@
       }
       .booking-plate-title {
         font-size: 13px;
+      }
+      #search-widgetplace-holder {
+        max-width: calc(100vw - 24px) !important; /* tighter on very small screens */
       }
     }

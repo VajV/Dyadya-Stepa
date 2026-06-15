@@ -1106,6 +1106,30 @@
     </div>
   </footer>
 
+  <!-- Clamp FD24 elements that may be injected outside the booking plate into body -->
+  <script>
+  (function() {
+    function clampFD24() {
+      var plate = document.querySelector('.booking-plate');
+      if (!plate) return;
+      var w = Math.round(plate.getBoundingClientRect().width);
+      ['search-widgetplace-holder', 'search-widget-iframe'].forEach(function(id) {
+        var el = document.getElementById(id);
+        if (!el) return;
+        if (!plate.contains(el)) {
+          // element was injected outside the plate — hard-clamp its width
+          el.style.setProperty('max-width', w + 'px', 'important');
+          el.style.setProperty('overflow-x', 'hidden', 'important');
+          el.style.setProperty('box-sizing', 'border-box', 'important');
+        }
+      });
+    }
+    // Run multiple times: FD24 injects asynchronously
+    [300, 800, 1500, 3000].forEach(function(ms) { setTimeout(clampFD24, ms); });
+    new MutationObserver(clampFD24).observe(document.body, { childList: true, subtree: true });
+  })();
+  </script>
+
   <!-- FRONTDESK24 BOOKING WIDGET (search form, opens booking in a popup) -->
   <script>
     widgetOptions = {
