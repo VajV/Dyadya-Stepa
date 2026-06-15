@@ -1110,7 +1110,7 @@
     function clampFD24() {
       var inner = document.querySelector('.booking-inner');
       if (!inner) return;
-      var w = Math.min(Math.round(inner.getBoundingClientRect().width), 400);
+      var w = Math.min(Math.round(inner.getBoundingClientRect().width), 600);
       ['search-widgetplace-holder', 'search-widget-iframe'].forEach(function(id) {
         var el = document.getElementById(id);
         if (!el) return;
@@ -1133,7 +1133,7 @@
     widgetOptions = {
       token: "5080A733-D88C-455B-8F0B-4ECD26387B4E",
       target: "search-widget",
-      widget_width: "400",
+      widget_width: "600",
       splitDates: true,
       align: "left",
       showGuestsCount: true,
