@@ -1771,11 +1771,10 @@
     /* ===== DIRECT BOOKING WIDGET SECTION (Frontdesk24) ===== */
     .booking-section {
       background: linear-gradient(160deg, #071F43 0%, #0a3a8b 55%, #0A58CA 100%);
-      padding: 56px 24px;
+      padding: 28px 24px;
       position: relative;
       overflow-x: clip;
       border-top: 3px solid var(--color-accent);
-      /* disable page ornament pattern on this section */
       background-image: none;
     }
     /* subtle ornament overlay */
@@ -1804,22 +1803,17 @@
       font-weight: 900;
       text-transform: uppercase;
       letter-spacing: 2px;
-      margin-bottom: 14px;
+      margin-bottom: 6px;
     }
     .booking-title {
-      font-size: 30px;
+      font-size: 22px;
       font-weight: 900;
       color: #fff;
       letter-spacing: -0.5px;
       line-height: 1.2;
-      margin-bottom: 10px;
+      margin-bottom: 16px;
     }
-    .booking-hint {
-      font-size: 14px;
-      color: rgba(255, 255, 255, 0.6);
-      line-height: 1.55;
-      margin-bottom: 28px;
-    }
+    .booking-hint { display: none; }
     /* FD24's widget.js sets position:absolute on #search-widget via inline style.
        !important overrides inline styles and keeps the widget in the page flow. */
     #search-widget {
@@ -1843,7 +1837,7 @@
       display: block !important;
     }
     @media (max-width: 576px) {
-      .booking-section { padding: 36px 16px; }
-      .booking-title   { font-size: 24px; }
+      .booking-section { padding: 20px 16px; }
+      .booking-title   { font-size: 18px; }
       #search-widgetplace-holder { max-width: calc(100vw - 32px) !important; }
     }
