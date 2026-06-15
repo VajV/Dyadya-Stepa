@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Дядя Стёпа">
+  <rect width="64" height="64" rx="13" fill="#0A58CA"/>
+  <path d="M32 12.8 9.6 32h44.8L32 12.8z" fill="#FFB300"/>
+  <path d="M16.6 30.7h30.8V51.2H36.5V38.4h-9V51.2H16.6V30.7z" fill="#FFB300"/>
+</svg>

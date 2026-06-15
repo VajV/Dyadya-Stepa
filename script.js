@@ -36,11 +36,10 @@ function toggleFaq(button) {
   }
 }
 
-// BOOKING: all CTAs lead to the Yandex Travel affiliate page
-const BOOKING_URL = "https://travel.yandex.ru/hotels/sochi/diadia-stiopa/?affiliate_clid=4910087&affiliate_vid=188657&travelpayouts_uid=4e8c9cbf79f7458cb8c6b9776-188657&utm_campaign=xn-----7kcbqaeee3dxbseo5qb.xn--p1ai&utm_medium=cpa&utm_source=travelpayouts";
-
+// BOOKING: all CTAs scroll to the direct Frontdesk24 booking widget
 function openBooking() {
-  window.open(BOOKING_URL, '_blank');
+  const section = document.getElementById('booking');
+  if (section) section.scrollIntoView({ behavior: 'smooth' });
 }
 
 // ROOM CARD PHOTO SLIDERS
