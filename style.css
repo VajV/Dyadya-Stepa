@@ -236,7 +236,10 @@
       transform: translateY(-1px);
     }
     .btn-hero-secondary {
-      padding: 20px 48px; /* larger than default 16px 32px — sole hero CTA now */
+      min-width: 520px;        /* ~2× шире прежнего — единственный CTA героя */
+      max-width: 100%;         /* не вылезать за контейнер */
+      justify-content: center; /* текст по центру широкой кнопки */
+      padding: 26px 48px;      /* высота +30% (было 20px) */
       font-size: 16px;
       background: var(--color-primary);
       border: 1px solid var(--color-primary);
@@ -1488,6 +1491,10 @@
       }
       .stat-box h3 {
         font-size: 28px;
+      }
+      .btn-hero-secondary {
+        min-width: 0;   /* на узких экранах не форсируем 520px */
+        width: 100%;    /* кнопка во всю ширину контейнера */
       }
     }
 
