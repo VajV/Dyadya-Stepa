@@ -1770,8 +1770,6 @@
 
     /* ===== DIRECT BOOKING WIDGET SECTION (Frontdesk24) ===== */
     .booking-section {
-      background-image: var(--ornament), linear-gradient(160deg, #071F43 0%, #0a3a8b 55%, #0A58CA 100%);
-      background-size: 140px 140px, auto;
       padding: 28px 24px;
       position: relative;
       overflow-x: clip;
@@ -1797,7 +1795,7 @@
     .booking-title {
       font-size: 22px;
       font-weight: 900;
-      color: #fff;
+      color: var(--color-text-main);
       letter-spacing: -0.5px;
       line-height: 1.2;
       margin-bottom: 16px;
