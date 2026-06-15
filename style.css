@@ -236,12 +236,18 @@
       transform: translateY(-1px);
     }
     .btn-hero-secondary {
-      background: rgba(10, 88, 202, 0.08);
-      border: 1px solid rgba(10, 88, 202, 0.2);
-      color: var(--color-primary);
+      padding: 20px 48px; /* larger than default 16px 32px — sole hero CTA now */
+      font-size: 16px;
+      background: var(--color-primary);
+      border: 1px solid var(--color-primary);
+      color: #fff;
+      box-shadow: 0 4px 15px rgba(10, 88, 202, 0.25);
     }
     .btn-hero-secondary:hover {
-      background: rgba(10, 88, 202, 0.14);
+      background: var(--color-primary-hover);
+      border-color: var(--color-primary-hover);
+      box-shadow: 0 6px 20px rgba(10, 88, 202, 0.35);
+      transform: translateY(-1px);
     }
 
     /* RIGHT HERO IMAGE CARD */
