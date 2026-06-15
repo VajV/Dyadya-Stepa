@@ -1785,7 +1785,7 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      color: var(--color-text-main);
+      color: var(--color-accent);
       font-size: 34px;
       font-weight: 900;
       letter-spacing: -1px;
@@ -1795,7 +1795,7 @@
     .booking-title {
       font-size: 15px;
       font-weight: 600;
-      color: var(--color-text-muted);
+      color: var(--color-text-main);
       letter-spacing: 0;
       line-height: 1.4;
       margin-bottom: 16px;
