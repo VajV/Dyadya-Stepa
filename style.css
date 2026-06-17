@@ -304,6 +304,10 @@
     section {
       padding: 80px 24px;
     }
+    /* Каталог идёт сразу за блоком бронирования — убираем большой верхний отступ (−80%) */
+    #rooms {
+      padding-top: 16px;
+    }
     .section-header {
       max-width: 1200px;
       margin: 0 auto 48px auto;
@@ -671,6 +675,35 @@
     .btn-room-direct-book:hover {
       background-color: var(--color-primary-hover);
       box-shadow: 0 6px 14px rgba(10, 88, 202, 0.25);
+    }
+
+    /* SOLD-OUT ROOMS (не сдаются) */
+    .room-card--sold .room-status {
+      background: #d92d20;            /* красный вместо золотого */
+      color: #fff;
+      z-index: 2;                     /* поверх вуали */
+    }
+    .room-card--sold .slider-track {
+      filter: grayscale(0.45);        /* лёгкое обесцвечивание фото */
+    }
+    .room-card--sold .room-image-holder::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(255, 255, 255, 0.35); /* лёгкая вуаль */
+      pointer-events: none;
+      z-index: 1;                     /* ниже стрелок/точек (z-index 2) */
+    }
+    .room-card--sold .price-amount {
+      text-decoration: line-through;  /* зачёркнутая цена */
+      color: var(--color-text-muted);
+    }
+    .room-card--sold .btn-room-direct-book,
+    .room-card--sold .btn-room-direct-book:hover {
+      background-color: #cbd2d9;      /* серая неактивная */
+      color: #6b7280;
+      box-shadow: none;
+      cursor: not-allowed;
     }
 
     /* WHY BOOK WITH US SECTION */
