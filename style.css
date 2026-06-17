@@ -304,9 +304,9 @@
     section {
       padding: 80px 24px;
     }
-    /* Каталог идёт сразу за блоком бронирования — убираем большой верхний отступ (−80%) */
+    /* Каталог идёт сразу за блоком бронирования — почти убираем верхний отступ */
     #rooms {
-      padding-top: 16px;
+      padding-top: 4px;
     }
     .section-header {
       max-width: 1200px;
@@ -1816,7 +1816,7 @@
 
     /* ===== DIRECT BOOKING WIDGET SECTION (Frontdesk24) ===== */
     .booking-section {
-      padding: 14px 24px;
+      padding: 14px 24px 4px;
       position: relative;
       overflow-x: clip;
     }
